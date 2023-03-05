@@ -101,74 +101,14 @@ print()
 
 #########################################################################################
 
-first_row_input_char_values = []
-
-for letter in first_row_input:
-    value = ord(letter)
-
-    first_row_input_char_values.append(value)
-
-first_row_input_char_sum = sum(first_row_input_char_values)
-
-first_row_solution_char_values = []
-
-for letter in first_row_solution:
-    value = ord(letter)
-
-    first_row_solution_char_values.append(value)
-
-first_row_solution_char_sum = sum(first_row_solution_char_values)
-
-#########################################################################################
-
-second_row_input_char_values = []
-
-for letter in second_row_input:
-    value = ord(letter)
-
-    second_row_input_char_values.append(value)
-
-second_row_input_char_sum = sum(second_row_input_char_values)
-
-second_row_solution_char_values = []
-
-for letter in second_row_solution:
-    value = ord(letter)
-
-    second_row_solution_char_values.append(value)
-
-second_row_solution_char_sum = sum(second_row_solution_char_values)
-
-#########################################################################################
-
-third_row_input_char_values = []
-
-for letter in third_row_input:
-    value = ord(letter)
-
-    third_row_input_char_values.append(value)
-
-third_row_input_char_sum = sum(third_row_input_char_values)
-
-third_row_solution_char_values = []
-
-for letter in third_row_solution:
-    value = ord(letter)
-
-    third_row_solution_char_values.append(value)
-
-third_row_solution_char_sum = sum(third_row_solution_char_values)
-
-#########################################################################################
-
 rounds = []
 rounds_counter = 0
 
-first_row_flag = first_row_input_char_sum == first_row_solution_char_sum
-second_row_flag = second_row_input_char_sum == second_row_solution_char_sum
-third_row_flag = third_row_input_char_sum == third_row_solution_char_sum
+first_row_index_check = first_row_input[0] in first_row_solution and first_row_input[1] in first_row_solution and first_row_input[2] in first_row_solution
+second_row_index_check = second_row_input[0] in second_row_solution and second_row_input[1] in second_row_solution and second_row_input[2] in second_row_solution
+third_row_index_check = third_row_input[0] in third_row_solution and third_row_input[1] in third_row_solution and third_row_input[2] in third_row_solution
 
-if first_row_flag and second_row_flag and third_row_flag:
+if first_row_index_check and second_row_index_check and third_row_index_check:
     first_row_check()
     second_row_check()
     third_row_check()
